@@ -48,7 +48,7 @@ const CurrencyCalculatorContainer: FC<PropsWithChildren> = ({ children }) => {
   )
 }
 
-export const withCurrencyCalculator = <P extends object>(WrappedComponent: ComponentType<P>): FC<P> => {
+export const withCurrencyCalculator = <P extends object>(WrappedComponent: ComponentType<P>): ComponentType<P> => {
   const WithCurrencyCalculator: FC<P> = (props) => {
     return (
       <CurrencyCalculatorContainer>
